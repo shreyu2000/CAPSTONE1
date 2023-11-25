@@ -1,0 +1,16 @@
+img{
+    width: 50vw;
+    height: 100vh;
+}
+
+
+
+.bottom{
+        position: absolute;
+        bottom: 3vh;
+        left:2vw;
+        color: white;
+        font-size: 55px;
+        font-weight: 900;
+        max-width:50vw;
+}
