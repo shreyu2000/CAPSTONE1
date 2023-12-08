@@ -1,101 +1,112 @@
-
-.body{
-    /* background-color: black; */
-    /* text-align: center; */
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-    width: 50vw;
-    height: 100vh;
-    /* border: 2px solid white; */
-}
-.form{
-    width: 500px;
-    /* border: 2px solid white; */
-    margin-left: 8rem;
-    margin-top: 20px;
-    
+@import url("https://fonts.googleapis.com/css2?family=Single+Day&display=swap");
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-
-.super{
-    color: #72DB73;
-    font-size:38px;
-    font-weight: 400;
-    text-align: center;
-    /* border: 2px solid white; */
-    
-
+.body {
+  background: black;
+  color: white;
+  width: 50vw;
+  /* min-height: 100vh; */
+  padding: 4vw;
+  box-sizing: border-box;
+  text-align: center;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
 }
 
-.para{
-    color: white;
-    font-size: 18px;
-    font-weight: 400;
-    font-family: sans-serif;
-    text-align: center;
-    /* border: 2px solid white; */
-
+.body .super {
+  color: #72db73;
+  font-size: 3rem;
+  margin-bottom: 5px;
+  margin-top: 2px;
+}
+.super {
+  font-family: "Single Day", cursive;
+}
+form input {
+  margin: 12px auto;
+  padding: 10px;
+  width: 90%;
+  max-width: 400px;
+  background-color: #292929;
+  border: 2px solid red;
+  border-radius: 6px;
+  color: white;
+  outline: none;
+  transition: border 0.3s;
 }
 
-input {
-    
-    width:400px ;/* Make inputs take full width */
-    height: 50px;
-    box-sizing: border-box; /* Include padding and border in the width */
-    margin-bottom: 10px; /* Add space between inputs */
-    background-color: #292929;
-    border: none;    
-    margin-left: 40px;
-    color: #7C7C7C;
+form input:focus {
+  border-color: #72db73;
 }
 
-
-
-input::placeholder{
-    color: #7C7C7C;
-    font-size: 15px;
-    padding-left: 20px;
+form .error {
+  color: red;
+  font-size: 14px;
+  width: 90%;
+  max-width: 400px;
+  margin: -10px auto 8px;
+  text-align: left;
+  margin-top: 2px;
 }
 
-input[type="checkbox"]{
-    width: auto;
-    height: auto;
-   
+form label {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 10px;
+  width: 90%;
+  max-width: 400px;
+  margin: 12px auto;
+  text-align: left;
 }
 
-label{
-    color: #7C7C7C;
-    display: block;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+form label input[type="checkbox"] {
+  margin: 0;
+  width: 24px;
+  height: 24px;
 }
 
-button{
-    width: 400px;
-    height: 40px;
-    color: white;
-    font-size: 20px;
-    font-weight: 600;
-    background: #72DB73;
-    border-radius: 25px;
-    margin-left: 40px;
-    cursor: pointer;
-    outline: none;
+form button {
+  width: 90%;
+  max-width: 400px;
+  margin: 24px auto;
+  border-radius: 24px;
+  padding: 10px 12px;
+  color: white;
+  background-color: #72db73;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.error{
-    color: #dc3545;
-    margin-left: 40px;
-    padding: 0;
-    margin-top: 2px;
-    margin-bottom: 1px;
+form button:hover {
+  background-color: #5cb85c;
 }
 
+.footer p {
+  font-size: 14px;
+  color: #7c7c7c;
+  width: 90%;
+  max-width: 400px;
+  margin: 8px auto;
+  text-align: left;
+  line-height: 1.2rem;
+}
 
-footer > p{
-    color: #7C7C7C;
-    margin-left: 40px;
+.footer span {
+  color: #72db73;
+  cursor: pointer;
+}
 
-
+@media (max-width: 768px) {
+  .body {
+    padding: 1vw;
+  }
 }
