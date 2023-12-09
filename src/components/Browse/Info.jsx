@@ -4,34 +4,33 @@ const Info = () => {
     const info = JSON.parse(window.localStorage.getItem("userData"));
     const genre = JSON.parse(window.localStorage.getItem("genres"));
 
-
     return (
         <div
           style={{
             width: "30vw",
-            minHeight: "40vh",
+            minHeight: "36vh",
             background: "#5746EA",
             borderRadius: "12px",
             padding: "6px",
             display: "flex",
-            gap: "12px",
+            gap: "9px",
           }}
         >
           <div>
             <img
               src={Profile}
               style={{
-                height: "32vh",
-                width: "10vw",
+                height: "30vh",
+                width: "6vw",
                 position: "relative",
                 top: "2vh",
               }}
             />
           </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-            <p style={{ color: "white", fontSize: "2rem" }}>{info.name}</p>
-            <p style={{ color: "white", fontSize: "2rem" }}>{info.mail}</p>
-            <p style={{ color: "white", fontSize: "3rem" }}>{info.username}</p>
+          <div style={{ marginLeft:"10px"}}>
+            <p style={{ color: "white", fontSize: "1.2rem" ,marginTop:"0"}}>{info.name}</p>
+            <p style={{ color: "white", fontSize: "1.2rem" }}>{info.mail}</p>
+            <p style={{ color: "white", fontSize: "1.2rem" }}>{info.username}</p>
             <Chips categories={genre} color={"#9F94FF"} />
           </div>
         </div>
@@ -56,7 +55,7 @@ const Info = () => {
               }}
             >
               {category}{" "}
-              <span style={{ color: "black", marginLeft: "4px" }}>X</span>
+              {/* <span style={{ color: "black", marginLeft: "4px" }}>X</span> */}
             </button>
           ))}
         </div>
