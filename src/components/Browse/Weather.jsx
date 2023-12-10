@@ -1,4 +1,9 @@
 import { useEffect,useState } from "react";
+import pressure from "../../assets/images/press.png"
+import humidity from "../../assets/images/humidity.png"
+import wind from "../../assets/images/windspeed.png"
+
+
 const Weather = () => {
     const [date ,setDate] = useState("");
     const [time ,setTime] = useState("");
@@ -94,7 +99,8 @@ const Weather = () => {
               >
                 <span>{weather.current.temp_c}</span> C
               </p>
-              <p>{weather.current.pressure_mb} pressure</p>
+
+              <p>{weather.current.pressure_mb} mbar <br/>Pressure</p>
             </div>
             <div>
               <p

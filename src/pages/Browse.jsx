@@ -35,22 +35,22 @@ const Browse = () => {
         </div>
       </div>
       <button
-        style={{
+        style ={{
           position: "absolute",
-          bottom: "5px",
-          right: "2vw",
+          bottom: "1px",
+          right: "5px",
           marginTop:"3rem",
           background: "green",
           border: "none",
           color: "white",
           padding: "8px",
           borderRadius: "12px",
-          width:"10vw",
+          width:"9vw",
           height:"5vh"
         }}
         onClick={handleClick}
       >
-        Next Page
+        Browse
       </button>
     </div>
   );

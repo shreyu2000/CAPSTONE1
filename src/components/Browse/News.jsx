@@ -8,7 +8,7 @@ const News = () => {
   useEffect(() => {
     const fetchNews = async () => {
       await fetch(
-        "https://newsapi.org/v2/everything?q=tesla&from=2023-11-09&sortBy=publishedAt&apiKey=9fc2249a9637457a96e0b2dd1c806615"
+        "https://newsapi.org/v2/everything?q=apple&from=2023-12-09&to=2023-12-09&sortBy=popularity&apiKey=9fc2249a9637457a96e0b2dd1c806615"
       )
         .then(async (data) => await data.json())
         .then((res) => setNews(res.articles[0]));
@@ -41,24 +41,25 @@ const News = () => {
   return (
     <div
       style={{
-        height: "100vh",
-        width: "30vw",
+        height: "105vh",
+        width: "25vw",
         position: "relative",
         borderRadius: "12px",
-        padding: "6px",
+        padding: "3px",
+        marginTop:"5px"
       }}
     >
       <img
         src={news.urlToImage}
-        style={{ height: "60vh", borderRadius: "12px", width: "30vw" }}
+        style={{ height: "60vh", borderRadius: "12px", width: "25vw" }}
       />
       <div
         style={{
           height: "30vh",
           borderRadius: "12px",
-          width: "30vw",
+          width: "25vw",
           background: "white",
-          fontSize: "1.2rem",
+          fontSize: "1rem",
           padding: "6px",
         }}
       >
@@ -67,15 +68,15 @@ const News = () => {
       <div
         style={{
           position: "absolute",
-          width: "30vw",
+          width: "25vw",
           height: "30vh",
           background: "rgba(0, 0, 0, 0.74)",
           top: "31vh",
-          padding: "24px",
+          padding: "20px",
           boxSizing: "border-box",
         }}
       >
-        <p style={{ color: "white", fontSize: "1.5rem", marginBottom: "10px" }}>
+        <p style={{ color: "white", fontSize: "1.4rem", marginBottom: "10px" }}>
           {news.title}
         </p>
         <span

@@ -1,6 +1,5 @@
 import { useState } from "react";
-import Edit from "../../assets/images/edit.png";
-import pen from "../../assets/images/pen.png";
+
 
 const Notes = () => {
   const [text, setText] = useState(
@@ -16,14 +15,14 @@ const Notes = () => {
       style={{
         color: "white",
         background: "#F1C75B",
-        height: "60vh",
-        width: "30vw",
+        height: "58vh",
+        width: "25vw",
         position: "relative",
         borderRadius: "12px",
         padding: "6px",
       }}
     >
-      <p style={{ color: "black", fontSize: "2rem" }}>All notes</p>
+      <p style={{ color: "black", fontSize: "1.5rem",marginLeft:"20px" }}> All notes</p>
       <textarea
         style={{
           width: "28vw",
@@ -35,26 +34,6 @@ const Notes = () => {
         }}
         value={text}
         onChange={(e) => handleChange(e)}
-      />
-      <img
-        src={Edit}
-        style={{
-          width: "50px",
-          height: "50px",
-          position: "absolute",
-          bottom: "11px",
-          right: "5px",
-        }}
-      />
-      <img
-        src={pen}
-        style={{
-          width: "30px",
-          height: "30px",
-          position: "absolute",
-          bottom: "17px",
-          right: "10px",
-        }}
       />
     </div>
   );
